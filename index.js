@@ -7,6 +7,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:import/typescript',
     // 競合を避けるため、prettierは一番最後に書く
     'plugin:prettier/recommended',
@@ -27,7 +30,7 @@ module.exports = {
       },
     },
   },
-  plugins: ['import'],
+  plugins: ['jsx-a11y', 'import'],
   rules: {
     // prettier の設定
     'prettier/prettier': [
