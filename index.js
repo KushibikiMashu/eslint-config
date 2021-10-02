@@ -40,14 +40,10 @@ module.exports = {
         printWidth: 120,
       },
     ],
-    // 未使用の変数がある場合エラーにする（デフォルトは warning）
-    '@typescript-eslint/no-unused-vars': 'error',
     // named-exportを許可
     'import/prefer-default-export': 'off',
     // 絶対パスでのモジュールの読み込みをokにする
     'import/no-unresolved': 'off',
-    // 「import Link from 'next/link'」で引っかかるため無効化
-    'no-submodule-imports': 'off',
     // importの順番を整理する
     'import/order': [
       'error',
@@ -66,11 +62,17 @@ module.exports = {
         },
       },
     ],
+    // 「import Link from 'next/link'」で引っかかるため無効化
+    'no-submodule-imports': 'off',
     // if文内のcontinueをokにする
     'no-continue': 'off',
     // for (const a of A) を許可
     'no-restricted-syntax': 'off',
     // console.errorを許容する
     'no-console': ['error', {allow: ['warn', 'error']}],
+    // 未使用の変数がある場合エラーにする（デフォルトは warning）
+    '@typescript-eslint/no-unused-vars': 'error',
+    // 引数、返り値の型を省略 ok にする
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
   }
 }
