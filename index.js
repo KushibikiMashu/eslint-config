@@ -12,7 +12,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:import/typescript',
     // 競合を避けるため、prettierは一番最後に書く
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -30,7 +30,7 @@ module.exports = {
       },
     },
   },
-  plugins: ['jsx-a11y', 'import'],
+  plugins: ['jsx-a11y', 'import', 'prettier'],
   rules: {
     // prettier の設定
     'prettier/prettier': [
